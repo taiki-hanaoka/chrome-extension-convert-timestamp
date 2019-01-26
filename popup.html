@@ -1,0 +1,51 @@
+<script src="jquery-3.3.1.min.js"></script>
+<style>
+p {
+    margin: 0px;
+}
+.convert-target-block {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d9d9d9;
+}
+.convert-target-block__last {
+    padding-top: 16px;
+    border-bottom: none;
+}
+.label {
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+input[type="text"] {
+    padding: 8px;
+    margin-bottom: 0px;
+    border-radius: 4px;
+}
+.convert-button {
+    margin: 8px 0px;
+    padding: 8px;
+    color: #fff;
+    background-color: #51a8dc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+.result {
+    margin-bottom: 0px;
+}
+</style>
+
+<div class="convert-target-block">
+    <p class="label">to date</p>
+    <input type="text" data-element-id="convert-target-timestamp" placeholder="1188486000">
+    <p class="convert-button" data-element-id="convert-to-date-button">convert</p>
+    <p class="result" data-element-id="converted-date"></p>
+</div>
+
+<div class="convert-target-block__last">
+    <p class="label">to timestamp</p>
+    <input type="text" data-element-id="convert-target-date" placeholder="2007/08/31 00:00:00">
+    <p class="convert-button" data-element-id="convert-to-timestamp-button">convert</p>
+    <p class="result" data-element-id="converted-timestamp"></p>
+</div>
+
+<script src="./convert.js"></script>
