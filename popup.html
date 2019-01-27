@@ -11,9 +11,18 @@ p {
     padding-top: 16px;
     border-bottom: none;
 }
+.icon-and-label {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
 .label {
-    margin-bottom: 4px;
     font-size: 16px;
+}
+.extension-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
 }
 input[type="text"] {
     padding: 8px;
@@ -35,14 +44,20 @@ input[type="text"] {
 </style>
 
 <div class="convert-target-block">
-    <p class="label">to date</p>
+    <div class="icon-and-label">
+        <img class="extension-icon" src="./icons/clock_rock.png">
+        <p class="label">to date</p>
+    </div>
     <input type="text" data-element-id="convert-target-timestamp" placeholder="1188486000">
     <p class="convert-button" data-element-id="convert-to-date-button">convert</p>
     <p class="result" data-element-id="converted-date"></p>
 </div>
 
 <div class="convert-target-block__last">
-    <p class="label">to timestamp</p>
+    <div class="icon-and-label">
+        <img class="extension-icon" src="./icons/clock_rock.png">
+        <p class="label">to timestamp</p>
+    </div>
     <input type="text" data-element-id="convert-target-date" placeholder="2007/08/31 00:00:00">
     <p class="convert-button" data-element-id="convert-to-timestamp-button">convert</p>
     <p class="result" data-element-id="converted-timestamp"></p>

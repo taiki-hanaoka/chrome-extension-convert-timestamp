@@ -9,6 +9,12 @@ $(function () {
         $('[data-element-id="converted-date"]').text(timestamp);
     });
 
+    // タイムスタンプ変換ボタンを押した際の処理
+    $('[data-element-id="convert-to-timestamp-button"]').on('click', function () {
+        let timestamp = dateToTimestamp($('[data-element-id="convert-target-date"]').val());
+        $('[data-element-id="converted-timestamp"]').text(timestamp);
+    });
+
     // タイムスタンプ → 日付へ変換する処理
     function timestampToDate(timestamp) {
         let date = new Date(timestamp * 1000);
@@ -21,12 +27,6 @@ $(function () {
 
         return year + '/' + month + '/' + day + ' ' + hour + ':' + minutes + ':' + seconds;
     }
-
-    // タイムスタンプ変換ボタンを押した際の処理
-    $('[data-element-id="convert-to-timestamp-button"]').on('click', function () {
-        let timestamp = dateToTimestamp($('[data-element-id="convert-target-date"]').val());
-        $('[data-element-id="converted-timestamp"]').text(timestamp);
-    });
 
     // 日付 → タイムスタンプへ変換する処理
     function dateToTimestamp(date) {
